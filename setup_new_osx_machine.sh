@@ -8,7 +8,8 @@ install_cask_apps=false
 install_rvm=false
 install_node=false
 install_npm_global_package=false
-config_git=false
+configure_git_globals=false
+set_osx_preferences=false
 create_dotfile_symlinks=false
 
 # -------------------------
@@ -16,9 +17,6 @@ create_dotfile_symlinks=false
 NORMAL=$(tput sgr0)
 YELLOW=$(tput setaf 190)
 BLUE=$(tput setaf 153)
-
-echo "Manually install App Store apps first! Okay?"
-read okay
 
 # Install Homebrew
 if [ "$install_brew" = true ]; then
@@ -37,6 +35,8 @@ fi
 # Install apps with Cask
 if [ "$install_cask_apps" = true ]; then
 	echo "\n${YELLOW}Installing Cask apps${NORMAL}"
+	echo "\nManually install App Store apps first! Ctrl-C if you haven't. Press enter to continue."
+	read okay
 	export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 	brew cask install dropbox
 	brew cask install firefox
@@ -73,7 +73,7 @@ if [ "$install_npm_global_packages" = true ]; then
 fi
 
 # Configure git
-if [ "$config_git" = true ]; then
+if [ "$configure_git_globals" = true ]; then
 	echo "\n${YELLOW}Configuring Git${NORMAL}"
 	git_user_name="$(git config --get user.name)"
 	if [[ -z "$git_user_name" ]]; then
@@ -107,7 +107,13 @@ fi
 # Create dotfile symlinks in ~/
 if [ "$create_dotfile_symlinks" = true ]; then
 	echo "\n${YELLOW}Creating dotfile symlinks in ~/${NORMAL}"
-	sh setup_symlinks.sh
+	sh _create_dotfile_symlinks.sh
+fi
+
+# Set OSX preferences
+if [ "$set_osx_preferences" = true ]; then
+	echo "\n${YELLOW}Setting OSX preferences${NORMAL}"
+	sh _set_osx_preferences.sh
 fi
 
 # Clean up
