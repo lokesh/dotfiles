@@ -42,6 +42,7 @@ if [ "$install_cask_apps" = true ]; then
 	brew cask install firefox
 	brew cask install google-chrome
 	brew cask install google-drive
+	brew cask install spectacle
 	brew cask install spotify
 	brew cask install sourcetree
 	brew cask install sublime-text3
