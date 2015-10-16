@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Enable text substitution in every app. Preferences > Keyboard > Text
+defaults write -g WebAutomaticTextReplacementEnabled -bool true
+
 ###############################################################################
 # UI                                                                          #
 ###############################################################################

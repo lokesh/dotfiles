@@ -7,7 +7,8 @@ install_cask=false
 install_cask_apps=false
 install_rvm=false
 install_node=false
-install_npm_global_package=false
+install_npm_global_packages=false
+install_xcode_command_line_tools=false
 configure_git_globals=false
 set_osx_preferences=false
 create_dotfile_symlinks=false
@@ -70,7 +71,14 @@ if [ "$install_npm_global_packages" = true ]; then
 	sudo npm install -g bower
 	sudo npm install -g http-server
 	sudo npm install -g grunt-cli
+	sudo npm install -g gulp
 	sudo npm install -g express-generator
+fi
+
+# Install Xcode Command Line Tools
+if [ "$install_xcode_command_line_tools" = true ]; then
+	echo "\n${YELLOW}Installing Xcode Command Line Tools${NORMAL}"
+	xcode-select --install
 fi
 
 # Configure git
@@ -101,7 +109,7 @@ if [ "$configure_git_globals" = true ]; then
 	if echo "$update_git_user_email" | grep -iq "^y" ;then
 		echo "${BLUE}Enter value for git user.email (ex 'jenny.house@gmail.com'):${NORMAL}"
 		read git_user_email
-		git config --global user.email "${git_user_email}"    
+		git config --global user.email "${git_user_email}"
 	fi
 fi
 
