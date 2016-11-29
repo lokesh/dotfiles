@@ -43,6 +43,9 @@ if [ "$install_cask_apps" = true ]; then
 	brew cask install firefox
 	brew cask install google-chrome
 	brew cask install google-drive
+	brew cask install istat-menus
+	# ngrok - tunnel localhost to public url
+	brew cask install ngrok
 	brew cask install spectacle
 	brew cask install spotify
 	brew cask install sourcetree
