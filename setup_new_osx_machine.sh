@@ -63,20 +63,21 @@ if [ "$install_rvm_and_ruby" = true ]; then
 	rvm use ruby --install --default
 fi
 
- # Install Node and NPM
+ # Install NVM, Node, and NPM
 if [ "$install_node" = true ]; then
-	echo "\n${YELLOW}Installing Node and NPM${NORMAL}"
-	brew install node
+	echo "\n${YELLOW}Installing NVM${NORMAL}"
+	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+	nvm install node
 fi
 
  # Install NPM global packages
 if [ "$install_npm_global_packages" = true ]; then
 	echo "\n${YELLOW}Installing NPM global packages${NORMAL}"
-	sudo npm install -g bower
-	sudo npm install -g http-server
-	sudo npm install -g grunt-cli
-	sudo npm install -g gulp
-	sudo npm install -g express-generator
+	# sudo npm install -g bower
+	# sudo npm install -g http-server
+	# sudo npm install -g grunt-cli
+	# sudo npm install -g gulp
+	# sudo npm install -g express-generator
 fi
 
 # Install Xcode Command Line Tools

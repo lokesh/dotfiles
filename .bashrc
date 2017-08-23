@@ -45,3 +45,6 @@ PS1="$RED \w$YELLOW \$(parse_git_branch)$GREEN\$ "
 # PROJ_DIR="~/Projects/my_project"
 
 # alias pdir="cd $PROJECT_DIR"
+
+export PATH="$HOME/.yarn/bin:$PATH"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

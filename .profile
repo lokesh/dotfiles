@@ -20,3 +20,6 @@ export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 
 # MySQL
 export PATH="/usr/local/mysql/bin:$PATH"
+
+# Composer
+export PATH="~/.composer/vendor/bin:$PATH"
