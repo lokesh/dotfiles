@@ -30,7 +30,7 @@ fi
 # Install Cask
 if [ "$install_cask" = true ]; then
 	echo "\n${YELLOW}Installing Cask${NORMAL}"
-	brew install caskroom/cask/brew-cask
+	brew tap caskroom/cask/brew-cask
 fi
 
 # Install apps with Cask
