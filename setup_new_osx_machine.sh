@@ -5,7 +5,8 @@
 install_brew=false
 install_cask=false
 install_cask_apps=false
-install_rvm_and_ruby=false
+install_rvm=false
+install_ruby=false
 install_node=false
 install_xcode_command_line_tools=false
 configure_git_globals=false
@@ -55,10 +56,15 @@ if [ "$install_cask_apps" = true ]; then
 fi
 
 
-# Install RVM, its deps, and latest stable Ruby
-if [ "$install_rvm_and_ruby" = true ]; then
+# Install RVM
+if [ "$install_rvm" = true ]; then
 	brew install gnupg gnupg2
 	\curl -sSL https://get.rvm.io | bash
+	echo "\n${YELLOW}Open a new terminal window before to use RVM for installing Ruby${NORMAL}"
+fi
+
+# Install latest stable Ruby
+if [ "$install_ruby" = true ]; then
 	rvm use ruby --install --default
 fi
 
