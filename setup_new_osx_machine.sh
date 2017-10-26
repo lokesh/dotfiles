@@ -41,17 +41,17 @@ if [ "$install_cask_apps" = true ]; then
 	brew cask install dropbox
 	brew cask install firefox
 	brew cask install google-chrome
-	brew cask install google-drive
-	brew cask install istat-menus
+	# brew cask install google-drive
+	# brew cask install istat-menus
 	# ngrok - tunnel localhost to public url
 	brew cask install ngrok
 	brew cask install spectacle
 	brew cask install spotify
 	brew cask install sourcetree
 	brew cask install sublime-text3
-	brew cask install virtualbox
+	# brew cask install virtualbox
 	brew cask install vlc
-	brew cask install webstorm
+	# brew cask install webstorm
 fi
 
 
