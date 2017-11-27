@@ -40,6 +40,10 @@ GREEN="\[\033[0;32m\]"
 
 PS1="$RED \w$YELLOW \$(parse_git_branch)$GREEN\$ "
 
+# EDITOR
+
+export EDITOR='subl'
+
 # Bash Aliases
 
 # PROJ_DIR="~/Projects/my_project"
