@@ -3,7 +3,6 @@
 # Options -----------------
 
 install_brew=false
-install_cask=false
 install_cask_apps=false
 install_rvm=false
 install_ruby=false
@@ -11,7 +10,7 @@ install_node=false
 install_xcode_command_line_tools=false
 configure_git_globals=false
 set_osx_preferences=false
-create_dotfile_symlinks=false
+# create_dotfile_symlinks=false
 
 # -------------------------
 
@@ -27,12 +26,6 @@ if [ "$install_brew" = true ]; then
 	rm -f -r /Library/Caches/Homebrew/*
 fi
 
-# Install Cask
-if [ "$install_cask" = true ]; then
-	echo "\n${YELLOW}Installing Cask${NORMAL}"
-	brew tap caskroom/cask/brew-cask
-fi
-
 # Install apps with Cask
 if [ "$install_cask_apps" = true ]; then
 	echo "\n${YELLOW}Installing Cask apps${NORMAL}"
@@ -41,17 +34,15 @@ if [ "$install_cask_apps" = true ]; then
 	export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 	brew cask install dropbox
 	brew cask install firefox
-	brew cask install google-chrome
-	# brew cask install google-drive
+	# brew cask install google-chrome
 	# brew cask install istat-menus
-	# ngrok - tunnel localhost to public url
 	brew cask install ngrok
 	brew cask install spectacle
 	brew cask install spotify
-	brew cask install sourcetree
-	brew cask install sublime-text3
+	# brew cask install sourcetree
+	# brew cask install sublime-text3
 	# brew cask install virtualbox
-	brew cask install vlc
+	# brew cask install vlc
 	# brew cask install webstorm
 fi
 

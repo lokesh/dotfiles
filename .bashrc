@@ -7,9 +7,6 @@
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
 # Command Prompt
 
 export CLICOLOR=1
@@ -43,12 +40,3 @@ PS1="$RED \w$YELLOW \$(parse_git_branch)$GREEN\$ "
 # EDITOR
 
 export EDITOR='subl'
-
-# Bash Aliases
-
-# PROJ_DIR="~/Projects/my_project"
-
-# alias pdir="cd $PROJECT_DIR"
-
-export PATH="$HOME/.yarn/bin:$PATH"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
