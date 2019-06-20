@@ -9,6 +9,7 @@ install_ruby=false
 install_node=false
 install_xcode_command_line_tools=false
 configure_git_globals=false
+git_shortcuts=false
 set_osx_preferences=false
 # create_dotfile_symlinks=false
 
@@ -103,6 +104,13 @@ if [ "$configure_git_globals" = true ]; then
 		git config --global user.email "${git_user_email}"
 	fi
 fi
+
+# Git shortcuts
+if [ "$git_shortcuts" = true ]; then
+	echo "\n${YELLOW}Git branch name autocompletion in CLI${NORMAL}"
+	curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+ fi
+
 
 # Create dotfile symlinks in ~/
 if [ "$create_dotfile_symlinks" = true ]; then

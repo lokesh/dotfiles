@@ -25,6 +25,10 @@ shopt -s cdspell
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
+# ---
+# GIT
+# ---
+
 # Git Branch: Bedazzle prompt
 function parse_git_branch {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
@@ -37,6 +41,13 @@ GREEN="\[\033[0;32m\]"
 
 PS1="$RED \w$YELLOW \$(parse_git_branch)$GREEN\$ "
 
+# Git branch autocompletion
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
+# ------
 # EDITOR
+# ------
 
 export EDITOR='subl'
