@@ -1,3 +1,4 @@
+- Install oh my zsh
 - Install Xcode and agree to license
 - Open up `setup_new_osx_machine.sh` and toggle on the tasks you would like to
   run in the Options section.
