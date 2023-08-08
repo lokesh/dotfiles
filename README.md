@@ -22,3 +22,4 @@ Configuration:
 ## MacOS apps
 - Install Xcode and agree to license
 - Rectangle for Window mgmt. Shortcuts to full screen, 50/50, 1/3, 2/3, et al. Previously used Spectacles, but it is no longer maintained.
+- Lunar for managing multi-monitor brightness
