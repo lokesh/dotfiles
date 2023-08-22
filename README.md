@@ -11,6 +11,7 @@ MacOS uses zsh shell by default. Confirm with `echo $0`.
 
 - Install [Oh My ZSH](https://ohmyz.sh/) which helps with customization (e.g. adds theme support). It will create/overwrite your `.zshrc` file.
   - Switch themes by updating the config file: `ZSH_THEME="af-magic"`
+  - Add nvm plugin. `plugins=(git nvm)`
 
 Configutation files:
 - .zprofile
