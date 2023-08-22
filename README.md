@@ -1,13 +1,20 @@
+To-do
+- [ ] ditch bash profile?
 
-MacOS uses zsh shell by default.
+
+- Show hidden files in Finder: <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>.</kbd>
+
+- Install [VSCode](https://code.visualstudio.com/) code editor.
+  - Login with Github to port settings
+  - Install shell command
 
 ## Terminal
-- Install oh my zsh
-- Install nvm
+MacOS uses zsh shell by default. Confirm with `echo $0`.
+
+- Install [nvm](https://github.com/nvm-sh/nvm)
 - Install node through nvm: `nvm install node`
 
 ### Oh My ZSH
-
 Configuration:
 
 - .zprofile
@@ -16,6 +23,10 @@ Configuration:
 
 ## Github
 - Set up git username/email
+  - `git config --global user.name "Lokesh Dhakar"
+  - `git config --global user.email "lokesh.dhakar@gmail.com"`
+
+- 
 - Run `generate_ssh_keys.sh`.
 - (Optional) Run `clone_github_repos.sh` to clone all your Github repos and put them in `~/Projects/`.
 
