@@ -23,10 +23,9 @@ Configuration:
 
 ## Github
 - Set up git username/email
-  - `git config --global user.name "Lokesh Dhakar"
+  - `git config --global user.name "Lokesh Dhakar"`
   - `git config --global user.email "lokesh.dhakar@gmail.com"`
 
-- 
 - Run `generate_ssh_keys.sh`.
 - (Optional) Run `clone_github_repos.sh` to clone all your Github repos and put them in `~/Projects/`.
 
