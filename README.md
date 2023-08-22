@@ -1,9 +1,6 @@
-To-do
-- [ ] ditch bash profile?
-
-
 - Show hidden files in Finder: <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>.</kbd>
 
+## Code editor
 - Install [VSCode](https://code.visualstudio.com/) code editor.
   - Login with Github to port settings
   - Install shell command
@@ -11,15 +8,17 @@ To-do
 ## Terminal
 MacOS uses zsh shell by default. Confirm with `echo $0`.
 
-- Install [nvm](https://github.com/nvm-sh/nvm)
-- Install node through nvm: `nvm install node`
+- Install [Oh My ZSH](https://ohmyz.sh/) which helps with customization (e.g. adds theme support). It will create/overwrite your `.zshrc` file.
+  - Switch themes by updating the config file: `ZSH_THEME="af-magic"`
 
-### Oh My ZSH
-Configuration:
-
+Configutation files:
 - .zprofile
   - loads .profile
   - loads .zshrc
+
+## Node
+- Install [nvm](https://github.com/nvm-sh/nvm)
+- Install node through nvm: `nvm install node`
 
 ## Github
 - Set up git username/email
