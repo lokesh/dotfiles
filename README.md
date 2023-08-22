@@ -1,3 +1,4 @@
+## Finder
 - Show hidden files in Finder: <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>.</kbd>
 
 ## Code editor
